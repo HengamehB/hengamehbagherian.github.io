@@ -42,15 +42,13 @@
         /* Profile picture + caption */
         .profile-wrapper {
             float: right;
-            margin-left: 30px; /* Increased space between picture and text */
+            margin-left: 30px; 
             margin-bottom: 20px;
             text-align: center;
-            /* Increased width */
             width: 200px; 
         }
         
         .profile-pic {
-            /* Increased width and height */
             width: 200px; 
             height: 200px;
             border-radius: 50%;
@@ -78,6 +76,17 @@
             display: table;
             clear: both;
         }
+
+        /* NEW: Styling for the quote */
+        blockquote {
+            font-style: italic;
+            border-left: 3px solid #ccc;
+            padding-left: 15px;
+            margin: 30px 0;
+            color: #555;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
     </style>
 </head>
 
@@ -95,7 +104,7 @@
 
         <div class="profile-wrapper">
             <img src="DSC06273.jpeg" class="profile-pic" alt="Profile Picture">
-            <div class="caption">Hengameh Bagherian</div>
+            <div class="caption">Hengameh Bagherian, PhD</div>
         </div>
 
         <h1>Hengameh Bagherian</h1>
@@ -120,6 +129,11 @@
 
         <div style="clear: both;"></div> 
 
+        <blockquote>
+            “But I don’t want to go among mad people," Alice remarked.<br><br>
+            "Oh, you can’t help that," said the Cat: "we’re all mad here. I’m mad. You’re mad."
+        </blockquote>
+        
         <h3 id="cv">CV</h3>
         <p class="bio">Coming soon.</p>
 
