@@ -35,19 +35,21 @@
             margin: auto;
             background: white;
             padding: 30px;
-            padding-right: 200px; /* NEW — adds room so text never crashes into picture */
+            /* Removed the problematic padding-right: 200px; */
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            position: relative;
+            /* Removed position: relative; as it's not needed for the float approach */
         }
 
         /* Profile picture + caption */
         .profile-wrapper {
-            position: absolute;
-            top: 20px;
-            right: 20px;
+            /* FIX: Use float instead of absolute positioning */
+            float: right;
+            margin-left: 20px; /* Space between picture and text */
+            margin-bottom: 20px; /* Space below the picture */
             text-align: center;
-            width: 150px; /* matches the image width */
+            width: 150px; 
+            /* Removed top and right absolute positioning */
         }
         
         .profile-pic {
@@ -72,12 +74,18 @@
             line-height: 1.6;
             font-size: 1.1rem;
         }
+
+        /* FIX: Clear the float after the section where the image is present */
+        .bio-section::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
     </style>
 </head>
 
 <body>
 
-    <!-- Navigation Tabs (now 5 tabs) -->
     <div class="navbar">
         <a href="#cv">CV</a>
         <a href="#highschool">High School</a>
@@ -88,7 +96,6 @@
 
     <div class="container">
 
-        <!-- Profile Picture + caption -->
         <div class="profile-wrapper">
             <img src="DSC06273.jpeg" class="profile-pic" alt="Profile Picture">
             <div class="caption">Hengameh Bagherian</div>
@@ -96,23 +103,24 @@
 
         <h1>Hengameh Bagherian</h1>
 
-        <h3 id="about">Here is a bit about me:</h3>
-        <p class="bio">
-            I am a theoretical particle physicist from Iran. I did my undergraduate studies at MIT and got my PhD at Harvard University, 
-            where I worked with Matt Reece as my advisor. As of Sep. 2025, I am an NSF funded postdoctoral researcher at University of Chicago. 
-            I study early universe cosmology; This entails: dark matter, physics of big bang and inflation,
-            new hypothetical particles like axions, etc.
+        <div class="bio-section"> <h3 id="about">Here is a bit about me:</h3>
+            <p class="bio">
+                I am a theoretical particle physicist from Iran. I did my undergraduate studies at MIT and got my PhD at Harvard University, 
+                where I worked with Matt Reece as my advisor. As of Sep. 2025, I am an NSF funded postdoctoral researcher at University of Chicago. 
+                I study early universe cosmology; This entails: dark matter, physics of big bang and inflation,
+                new hypothetical particles like axions, etc.
 
-            <br><br>
-            As an international student (particularly from Iran) it was quite confusing to navigate my way through US academia. 
-            I decided to create this website to explain my tips and unsolicited advise for anyone who wants to take the journey.
-            I am going to have a section about high school physics and preparations for international physics olympiad (which I did back in Iran). 
-            I try to appeal to Iranian and non-Iranian audience alike, but this first section might be more useful for my Iranian audience. 
-            The next chapters will focus on admission to US schools for undergrad, PhD programs, and finally postdocs.
-            I hope this website helps some of you overcome the FOMO I always felt as I was finding my way!
-        </p>
+                <br><br>
+                As an international student (particularly from Iran) it was quite confusing to navigate my way through US academia. 
+                I decided to create this website to explain my tips and unsolicited advise for anyone who wants to take the journey.
+                I am going to have a section about high school physics and preparations for international physics olympiad (which I did back in Iran). 
+                I try to appeal to Iranian and non-Iranian audience alike, but this first section might be more useful for my Iranian audience. 
+                The next chapters will focus on admission to US schools for undergrad, PhD programs, and finally postdocs.
+                I hope this website helps some of you overcome the FOMO I always felt as I was finding my way!
+            </p>
+        </div>
 
-        <!-- New anchors for tabs; content can be filled later -->
+        <div style="clear: both;"></div> 
 
         <h3 id="cv">CV</h3>
         <p class="bio">Coming soon.</p>
