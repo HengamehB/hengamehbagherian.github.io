@@ -39,12 +39,13 @@
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
 
-        /* Profile picture + caption */
+        /* Profile picture + quote block */
         .profile-wrapper {
             float: right;
             margin-left: 30px; 
             margin-bottom: 20px;
             text-align: center;
+            /* Keep width consistent for the floating block */
             width: 200px; 
         }
         
@@ -54,12 +55,24 @@
             border-radius: 50%;
             object-fit: cover;
             border: 4px solid #eee;
+            margin-bottom: 10px; /* Added spacing below image */
         }
         
         .caption {
             margin-top: 6px;
             font-size: 0.85rem;
             color: #666;
+        }
+
+        /* NEW: Styling for the quote block inside the floating wrapper */
+        .quote-wrapper {
+            font-size: 0.9rem;
+            text-align: left; /* Align quote text left for readability */
+            margin-top: 15px; 
+            padding: 10px;
+            border-left: 2px solid #ccc;
+            color: #555;
+            font-style: italic;
         }
 
         h1 {
@@ -71,22 +84,14 @@
             font-size: 1.1rem;
         }
 
+        /* This clear ensures the headings below the bio start *after* the floating wrapper */
         .bio-section::after {
             content: "";
             display: table;
             clear: both;
         }
 
-        /* NEW: Styling for the quote */
-        blockquote {
-            font-style: italic;
-            border-left: 3px solid #ccc;
-            padding-left: 15px;
-            margin: 30px 0;
-            color: #555;
-            font-size: 1rem;
-            line-height: 1.5;
-        }
+        /* Removed the generic blockquote style since we're using .quote-wrapper now */
     </style>
 </head>
 
@@ -105,6 +110,11 @@
         <div class="profile-wrapper">
             <img src="DSC06273.jpeg" class="profile-pic" alt="Profile Picture">
             <div class="caption">Hengameh Bagherian, PhD</div>
+
+            <div class="quote-wrapper">
+                “But I don’t want to go among mad people," Alice remarked.<br>
+                "Oh, you can’t help that," said the Cat: "we’re all mad here. I’m mad. You’re mad."
+            </div>
         </div>
 
         <h1>Hengameh Bagherian</h1>
@@ -127,13 +137,6 @@
             </p>
         </div>
 
-        <div style="clear: both;"></div> 
-
-        <blockquote>
-            “But I don’t want to go among mad people," Alice remarked.<br><br>
-            "Oh, you can’t help that," said the Cat: "we’re all mad here. I’m mad. You’re mad."
-        </blockquote>
-        
         <h3 id="cv">CV</h3>
         <p class="bio">Coming soon.</p>
 
