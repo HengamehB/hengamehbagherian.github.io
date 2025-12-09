@@ -19,6 +19,7 @@
             gap: 20px;
             margin-bottom: 20px;
             font-size: 1.1rem;
+            flex-wrap: wrap;
         }
         .navbar a {
             text-decoration: none;
@@ -39,16 +40,25 @@
             position: relative;
         }
 
-        /* Profile picture */
-        .profile-pic {
+        /* Profile picture + caption */
+        .profile-wrapper {
             position: absolute;
             top: 20px;
             right: 20px;
+            text-align: center;
+            width: 240px;
+        }
+        .profile-pic {
             width: 240px;
             height: 240px;
             border-radius: 75%;
             object-fit: cover;
             border: 6px solid #eee;
+        }
+        .caption {
+            margin-top: 8px;
+            font-size: 0.9rem;
+            color: #666;
         }
 
         h1 {
@@ -64,23 +74,27 @@
 
 <body>
 
-    <!-- Navigation Tabs -->
+    <!-- Navigation Tabs (now 5 tabs) -->
     <div class="navbar">
-        <a href="#about">High School Tips</a>
-        <a href="#research">Undergraduate</a>
-        <a href="#contact">PhD Programs</a>
+        <a href="#cv">CV</a>
+        <a href="#highschool">High School</a>
+        <a href="#undergrad">Undergraduate</a>
+        <a href="#phd">PhD Programs</a>
+        <a href="#postdocs">Postdocs</a>
     </div>
 
     <div class="container">
 
-        <!-- Profile Picture -->
-        <img src="DSC06273.jpeg" class="profile-pic" alt="Profile Picture">
+        <!-- Profile Picture + caption -->
+        <div class="profile-wrapper">
+            <img src="DSC06273.jpeg" class="profile-pic" alt="Profile Picture">
+            <div class="caption">Hengameh Bagherian</div>
+        </div>
 
         <h1>Hengameh Bagherian</h1>
 
-        <h3 id="about">Here id a bit about me:</h3>
+        <h3 id="about">Here is a bit about me:</h3>
         <p class="bio">
-            
             I am a theoretical particle physicist from Iran. I did my undergraduate studies at MIT and got my PhD at Harvard University, 
             where I worked with Matt Reece as my advisor. As of Sep. 2025, I am an NSF funded postdoctoral researcher at University of Chicago. 
             I study early universe cosmology; This entails: dark matter, physics of big bang and inflation,
@@ -95,8 +109,26 @@
             I hope this website helps some of you overcome the FOMO I always felt as I was finding my way!
         </p>
 
+        <!-- New anchors for tabs; content can be filled later -->
+
+        <h3 id="cv">CV</h3>
+        <p class="bio">Coming soon.</p>
+
+        <h3 id="highschool">High School</h3>
+        <p class="bio">Coming soon.</p>
+
+        <h3 id="undergrad">Undergraduate</h3>
+        <p class="bio">Coming soon.</p>
+
+        <h3 id="phd">PhD Programs</h3>
+        <p class="bio">Coming soon.</p>
+
+        <h3 id="postdocs">Postdocs</h3>
+        <p class="bio">Coming soon.</p>
+
         <h3 id="contact">Contact</h3>
         <p>Email: See my papers on arXiv.</p>
+
     </div>
 </body>
 </html>
