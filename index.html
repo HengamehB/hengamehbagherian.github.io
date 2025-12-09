@@ -35,6 +35,7 @@
             margin: auto;
             background: white;
             padding: 30px;
+            padding-right: 200px; /* NEW — adds room so text never crashes into picture */
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
             position: relative;
@@ -46,18 +47,20 @@
             top: 20px;
             right: 20px;
             text-align: center;
-            width: 240px;
+            width: 150px; /* matches the image width */
         }
+        
         .profile-pic {
-            width: 240px;
-            height: 240px;
+            width: 150px;
+            height: 150px;
             border-radius: 75%;
             object-fit: cover;
-            border: 6px solid #eee;
+            border: 4px solid #eee;
         }
+        
         .caption {
-            margin-top: 8px;
-            font-size: 0.9rem;
+            margin-top: 6px;
+            font-size: 0.85rem;
             color: #666;
         }
 
