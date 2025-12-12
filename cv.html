@@ -47,11 +47,14 @@
 
         /* NEW: Style for the header image */
         .cv-header-image {
-            width: 30%;             /* Makes image span the full width of the container */
-            height: auto;            /* Maintains aspect ratio */
-            border-radius: 4px;      /* Optional: slight rounding of corners */
-            margin-bottom: 25px;     /* Space between image and the title */
+            width: 100%;                  /* Allows it to scale down on small screens */
+            max-width: 500px;             /* NEW: Sets the maximum size */
+            height: auto;
+            border-radius: 4px;
+            margin-bottom: 25px;
             display: block;
+            margin-left: auto;            /* NEW: Centers the image if it's smaller than the container */
+            margin-right: auto;           /* NEW: Centers the image */
         }
 
         h2 { margin-top: 0; }
