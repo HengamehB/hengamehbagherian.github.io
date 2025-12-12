@@ -40,7 +40,7 @@
             max-width: 700px;
             margin: auto;
             background: white;
-            padding: 10px 30px 30px;;
+            padding: 30px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
@@ -52,7 +52,10 @@
             max-width: 300px;             /* NEW: Sets the maximum size */
             height: auto;
             border-radius: 4px;
-            margin-bottom: -50px;
+            /* We use 15px margin-top to balance the 30px container padding above it */
+            margin-top: 15px;          
+            /* This creates 15px of space between the image and the h2 below */
+            margin-bottom: 15px;
             display: block;
             margin-left: auto;            /* NEW: Centers the image if it's smaller than the container */
             margin-right: auto;           /* NEW: Centers the image */
