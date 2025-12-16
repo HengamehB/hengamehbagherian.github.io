@@ -45,6 +45,26 @@
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
 
+        .header-bg-wrapper {
+            /* 1. Apply the GIF background */
+            background-image: url('footprints.gif'); 
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            
+            /* 2. Sizing and Centering */
+            width: 100%;
+            max-width: 550px;      /* Slightly wider than the image to create a frame */
+            margin: 20px auto;     /* Centers the wrapper and adds vertical spacing */
+            padding: 20px;         /* This creates the 'border' of GIF around the image */
+            
+            /* 3. Layout */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 8px;    /* Optional: softens the corners of the GIF area */
+        }
+
         /* NEW: Style for the header image */
         /* In the <style> block of cv.html */
         .cv-header-image {
@@ -81,7 +101,7 @@
         <a href="index.html#postdocs">Postdocs</a>
     </div>
 
-    <div class="container">
+    <div class="header-bg-wrapper">
 
         <img src="header_image.png" alt="Header Image" class="cv-header-image">
 
