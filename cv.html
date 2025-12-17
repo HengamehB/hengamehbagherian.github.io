@@ -45,7 +45,7 @@
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
 
-        .header-bg-wrapper {
+        .header-bg-wrapper-inactive {
             /* 1. Apply the GIF background */
             background-image: url('footprints.gif'); 
             background-size: cover;
@@ -64,6 +64,25 @@
             align-items: center;
             border-radius: 8px;    /* Optional: softens the corners of the GIF area */
         }
+
+        /* Fix for the GIF wrapper on mobile */
+        .header-bg-wrapper {
+                position: relative;
+                width: 100%;
+                max-width: 600px;
+                /* Changed height to be flexible or smaller on mobile */
+                height: auto; 
+                min-height: 200px; 
+                margin: 10px auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                overflow: hidden;
+                background-image: url('footprints2.gif');
+                background-size: contain; /* Changed to contain so it doesn't clip */
+                background-position: center;
+                background-repeat: no-repeat;
+            }
         
         /* Update your existing image class to remove its own margins */
         .cv-header-image {
@@ -112,6 +131,9 @@
     </div>
     <div class="container">
     <div class="header-bg-wrapper">
+        <!-- <video autoplay muted loop playsinline class="header-video">
+            <source src="footprints2.mp4" type="video/mp4">
+        </video> -->
         <img src="header_image.png" alt="Header Image" class="cv-header-image">
     </div>
 
